@@ -26,10 +26,12 @@ empty_phone_text = empty_phone_text_dict.get(desired_caps.get('language'))
 
 class OmoPage:
     def __init__(self):
-        self.driver = webdriver.Remote(
+        self.driver = self.driver = webdriver.Remote(
             'http://127.0.0.1:4723/wd/hub', desired_caps)
 
     def open(self):
+        self.driver = webdriver.Remote(
+            'http://127.0.0.1:4723/wd/hub', desired_caps)
         self.driver.implicitly_wait(10)
         return self
 
